@@ -58,3 +58,8 @@ body{
     background: #FF9A00;
     cursor: pointer;
 }
+
+.have-account{
+    text-align: center;
+    margin-top: 20px;
+}
