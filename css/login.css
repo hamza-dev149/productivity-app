@@ -51,4 +51,10 @@ body{
     border: none;
     font-size: 18px;
     border-radius: 15px;
+    transition: 0.3s;
+}
+
+.container button:hover{
+    background: #FF9A00;
+    cursor: pointer;
 }
