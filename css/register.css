@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #0B0D10;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 90px 20px 40px;
+    box-sizing: border-box;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(21, 25, 31, 0.85);
+    border-bottom: 1px solid #232A33;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.header h1{
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #FF7A00;
+}
+
+.header a{
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 1px solid #FF7A00;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.header a:hover{
+    background: #FF7A00;
+    color: #0B0D10;
+}
+
+.header a:focus-visible{
+    outline: 2px solid #FF9A00;
+    outline-offset: 2px;
+}
+
+.container{
+    height: 700px;
+    width: 600px;
+    background-color: #15191F;
+    color: #F5F5F5;
+    border-radius: 15px;
+}
+
+.container h1 {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.container input{
+    display: block;
+    width: 80%;
+    margin: 30px auto;
+    padding: 15px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.container button{
+    display: block;
+    width: 75%;
+    margin: 30px auto;
+    padding: 15px;
+    background: #FF7A00;
+    border: none;
+    font-size: 18px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.container .google-b{
+    display: block;
+    width: 75%;
+    margin: 30px auto;
+    padding: 15px;
+    background: #F5F5F5;
+    border: none;
+    font-size: 18px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.container button:hover{
+    background: #FF9A00;
+    cursor: pointer;
+}
+
+.container .google-b:hover{
+    background: #dfdbdb;
+    cursor: pointer;
+}
+
+.container .google-b img{
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.have-account{
+    text-align: center;
+    margin-top: 20px;
+}
