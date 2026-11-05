@@ -1,25 +1,29 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
-    background-color: #0B0D10;
-    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(255, 122, 0, 0.09), transparent 55%),
+        #0B0D10;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #F5F5F5;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 90px 20px 40px;
-    box-sizing: border-box;
 }
+
+/* ---------- Header ---------- */
 
 .header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,11 +31,12 @@ body{
     background: rgba(21, 25, 31, 0.85);
     border-bottom: 1px solid #232A33;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 100;
 }
 
 .header h1{
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
     letter-spacing: 0.5px;
     color: #FF7A00;
@@ -40,12 +45,12 @@ body{
 .header a{
     color: #F5F5F5;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 9px 18px;
     border: 1px solid #FF7A00;
-    border-radius: 10px;
-    transition: 0.3s;
+    border-radius: 9px;
+    transition: 0.2s ease;
 }
 
 .header a:hover{
@@ -58,71 +63,217 @@ body{
     outline-offset: 2px;
 }
 
+/* ---------- Card ---------- */
+
 .container{
-    height: 700px;
-    width: 600px;
+    width: 100%;
+    max-width: 420px;
     background-color: #15191F;
-    color: #F5F5F5;
-    border-radius: 15px;
+    border: 1px solid #232A33;
+    border-radius: 18px;
+    padding: 38px 32px 32px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
-.container h1 {
-    padding-top: 30px;
+.container .logo{
+    display: block;
+    width: 68px;
+    margin: 0 auto 18px;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(255, 122, 0, 0.18);
+}
+
+.container h1{
     text-align: center;
-    font-size: 45px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+}
+
+.subtitle{
+    margin-top: 6px;
+    text-align: center;
+    color: #98A2B3;
+    font-size: 14.5px;
+    line-height: 1.5;
+}
+
+/* ---------- Form ---------- */
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 26px;
 }
 
 .container input{
-    display: block;
-    width: 80%;
-    margin: 30px auto;
-    padding: 15px;
+    width: 100%;
+    padding: 14px 16px;
+    background: #0F1216;
+    border: 1px solid #2A313B;
+    border-radius: 10px;
+    color: #F5F5F5;
+    font-family: inherit;
+    font-size: 16px;
     outline: none;
-    font-size: 18px;
-    font-weight: 500;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container input::placeholder{
+    color: #6F7A87;
+}
+
+.container input:hover{
+    border-color: #3A4350;
+}
+
+.container input:focus{
+    border-color: #FF7A00;
+    box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.15);
 }
 
 .container button{
-    display: block;
-    width: 75%;
-    margin: 30px auto;
-    padding: 15px;
+    width: 100%;
+    padding: 14px;
     background: #FF7A00;
+    color: #0B0D10;
     border: none;
-    font-size: 18px;
-    border-radius: 15px;
-    transition: 0.3s;
-}
-.container .google-b{
-    display: block;
-    width: 75%;
-    margin: 30px auto;
-    padding: 15px;
-    background: #F5F5F5;
-    border: none;
-    font-size: 18px;
-    border-radius: 15px;
-    transition: 0.3s;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .container button:hover{
     background: #FF9A00;
-    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 122, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+.container button:active{
+    transform: translateY(0);
+}
+
+.container button:focus-visible{
+    outline: 2px solid #FF9A00;
+    outline-offset: 2px;
+}
+
+/* ---------- Google button ---------- */
+
+.container .google-b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #F5F5F5;
+    color: #15191F;
+    font-weight: 600;
 }
 
 .container .google-b:hover{
-    background: #dfdbdb;
-    cursor: pointer;
+    background: #E4E4E4;
+    box-shadow: none;
 }
 
 .container .google-b img{
-    width: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
+    width: 18px;
+    height: 18px;
 }
 
+/* ---------- Divider ---------- */
+
+.divider{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #6F7A87;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.divider::before,
+.divider::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #232A33;
+}
+
+/* ---------- Footer link ---------- */
+
 .have-account{
+    margin-top: 24px;
     text-align: center;
-    margin-top: 20px;
+    color: #98A2B3;
+    font-size: 14px;
+}
+
+.have-account a{
+    color: #FF7A00;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.have-account a:hover{
+    text-decoration: underline;
+}
+
+/* ---------- Helpers ---------- */
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 600px){
+    body{
+        padding: 84px 16px 32px;
+    }
+
+    .header{
+        padding: 14px 18px;
+    }
+
+    .header h1{
+        font-size: 21px;
+    }
+
+    .header a{
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .container{
+        padding: 30px 22px 26px;
+        border-radius: 16px;
+    }
+
+    .container h1{
+        font-size: 26px;
+    }
+
+    .container .logo{
+        width: 58px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    *{
+        transition: none !important;
+    }
 }

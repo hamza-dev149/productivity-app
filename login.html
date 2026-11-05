@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login page</title>
+    <title>Login — Focentra</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="icon" type="image/png" href="assests/icons/Glossy Orange Folded T Logo.png">
 </head>
@@ -11,19 +11,26 @@
     <div class="header">
         <h1>Focentra</h1>
 
-        <a href="register.html">sign up</a>
+        <a href="register.html">Sign up</a>
     </div>
-    <div class="container">
-        <img src="assests/icons/Glossy Orange Folded T Logo.png" alt="app-icon">
-        <h1>Login</h1>
+    <main class="container">
+        <img class="logo" src="assests/icons/Glossy Orange Folded T Logo.png" alt="Focentra logo">
+        <h1>Welcome back</h1>
+        <p class="subtitle">Log in to continue to your dashboard.</p>
+
         <form>
-            <input class="email-f" type="email" placeholder="example@email.com" required>
-            <input class="password-f" type="password" placeholder="Password" required>
+            <label class="sr-only" for="login-email">Email address</label>
+            <input id="login-email" class="email-f" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+
+            <label class="sr-only" for="login-password">Password</label>
+            <input id="login-password" class="password-f" type="password" name="password" placeholder="Password" autocomplete="current-password" required>
+
             <button class="submit-b" type="submit">Login</button>
         </form>
+
         <div class="have-account">
             <p>Don't have an account? <a href="register.html">Sign Up</a></p>
         </div>
-    </div>
+    </main>
 </body>
 </html>

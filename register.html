@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Page</title>
+    <title>Register — Focentra</title>
     <link rel="stylesheet" href="css/register.css">
     <link rel="icon" type="image/png" href="assests/icons/Glossy Orange Folded T Logo.png">
 </head>
@@ -11,20 +11,36 @@
     <div class="header">
         <h1>Focentra</h1>
 
-        <a href="login.html">login</a>
+        <a href="login.html">Login</a>
     </div>
-    <div class="container">
-        <h1>Sign Up</h1>
+    <main class="container">
+        <img class="logo" src="assests/icons/Glossy Orange Folded T Logo.png" alt="Focentra logo">
+        <h1>Create your account</h1>
+        <p class="subtitle">Start organizing your day with Focentra.</p>
+
         <form>
-            <input class="name-f" type="text" placeholder="username" required>
-            <input class="email-f" type="email" placeholder="example@email.com" required>
-            <input class="password-f" type="password" placeholder="Password" required>
+            <label class="sr-only" for="register-username">Username</label>
+            <input id="register-username" class="name-f" type="text" name="username" placeholder="Username" autocomplete="username" required>
+
+            <label class="sr-only" for="register-email">Email address</label>
+            <input id="register-email" class="email-f" type="email" name="email" placeholder="Email address" autocomplete="email" required>
+
+            <label class="sr-only" for="register-password">Password</label>
+            <input id="register-password" class="password-f" type="password" name="password" placeholder="Password" autocomplete="new-password" required>
+
             <button class="submit-b" type="submit">Sign Up</button>
-            <button class="google-b" type="submit">Sign Up with Google <img src="assests/icons/google.png" alt="Google Logo"></button>
+
+            <div class="divider"><span>or</span></div>
+
+            <button class="google-b" type="button">
+                <img src="assests/icons/google.png" alt="">
+                Sign up with Google
+            </button>
         </form>
+
         <div class="have-account">
             <p>Already have an account? <a href="login.html">Login</a></p>
         </div>
-    </div>
+    </main>
 </body>
 </html>
